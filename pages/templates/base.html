@@ -1,9 +1,28 @@
 <!-- pages/templates/base.html -->
+<style>
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #e387ff; /* Light purple background */
+    color: black;
+    text-align: center;
+    height: 3vh; /* Footer height is 3% of the viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
 <header>
 
-    <a href="{% url 'home' %}">Home</a> | <a href="{% url 'about' %}">About</a>
+    <a href="{% url 'home' %}">Home</a> | <a href="{% url 'about' %}">About</a> | <a href="{% url 'contact' %}">Contact</a>
   
-  </header>
+</header>
   
   {% block content %}
   {% endblock content %}
+
+  <div class="footer">
+    <p>Adam Bourque | ISDS Major with Internal Audit Minor | (225) 828-0848 | Louisiana State University</p>
+  </div>
